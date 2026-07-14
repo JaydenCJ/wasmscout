@@ -1,0 +1,18 @@
+[package]
+name = "wasmscout"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["JaydenCJ <aisingioro.kiyon@gmail.com>"]
+description = "A capability auditor for WebAssembly binaries: imports, WASI capabilities, custom sections and size — what can this module touch, before you run it."
+license = "MIT"
+repository = "https://github.com/JaydenCJ/wasmscout"
+keywords = ["wasm", "wasi", "audit", "security", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# none — wasmscout is std-only by design; auditing a binary format needs no crates.
+
+[profile.release]
+strip = true
+lto = true
